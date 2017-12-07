@@ -19550,19 +19550,6 @@ module.exports = __webpack_require__(26);
 ;
 (function($){
 
-    // function isScrolledIntoView(elem) {
-    //     if (elem.length) {
-    //         var docViewTop = $(window).scrollTop();
-    //         var docViewBottom = docViewTop + $(window).height();
-
-    //         var elemTop = $(elem).offset().top;
-    //         var elemBottom = elemTop + $(elem).height();
-
-    //         return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-    //     }
-    //     return false;
-    // }
-
     $(document).ready( function () {
 
         //Foundation init
