@@ -19550,6 +19550,14 @@ module.exports = __webpack_require__(26);
 ;
 (function($){
 
+  //spinner
+  $(window).on('load', function () {
+    var $preloader = $('#preloader'),
+        $spinner   = $('#loader');
+    $spinner.fadeOut();
+    $preloader.delay(350).fadeOut('slow');
+  });
+
     $(document).ready( function () {
 
         //Foundation init
