@@ -1,0 +1,28 @@
+html {
+  font-size: 16px;
+  @include breakpoint(medium only) {
+    font-size: 90%;
+  }
+  @include breakpoint(small only) {
+    font-size: 80%;
+  }
+}
+
+a, button, input  {
+	cursor: pointer;
+  transition:
+  border-color .1s ease-in,
+  color .1s ease-in,
+  background-color .1s ease-in;
+  &:focus {
+    outline: none; 
+  }
+}
+a {
+	text-decoration: none;
+}
+
+
+h1, h2, h3, p {
+	margin: 0; 
+}

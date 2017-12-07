@@ -1,0 +1,46 @@
+.two-col-grid-progress {
+	width: 100%;
+	overflow: hidden;
+	border-bottom: 1px solid #d9d9d9;
+	&__row {
+		@include flex-grid-row();
+		justify-content: center;
+		align-items: stretch;
+		@include breakpoint(medium down) {
+			padding: rem-calc(50) 0; 
+		}
+		@include breakpoint(medium) {
+			padding: rem-calc(45) 0; 
+		}
+	}
+	&__grid-col {
+		// border: 1px solid;
+		@include flex-grid-column(12);
+		@include breakpoint(medium down) {
+			text-align: center;
+		}
+		@include breakpoint(medium only) {
+			@include flex-grid-column(9);
+
+		}
+		@include breakpoint(large) {
+			@include flex-grid-column(6);
+		}
+	}
+	&__progress-col {
+		// border: 1px solid;
+		@include flex-grid-column(12);
+		@include breakpoint(medium down) {
+			text-align: center;
+		}
+		@include breakpoint(medium only) {
+			@include flex-grid-column(9);
+		}
+		@include breakpoint(large) {
+			@include flex-grid-column(6);
+						// @include flex-grid-column(6, 0);
+
+		}
+	}
+
+}

@@ -1,0 +1,58 @@
+.cards-slider {
+	padding-bottom: rem-calc(90); 
+	position: relative;
+	&__row {
+		@include flex-grid-row();
+		justify-content: center;
+		align-items: center;
+	}
+	&__slider {
+		width: 100%; 
+	}
+	&-slide {
+		&__wrap {
+			padding-bottom: rem-calc(20); 
+			max-width: rem-calc(370);
+			background-color: $dark-gray;
+			display: flex;
+			flex-direction: column;
+			margin: auto;
+			transition: opacity .4s ease-in;
+			&:hover {
+				cursor: pointer;
+				opacity: .8; 
+			}  
+		}
+		&__image	{
+			max-width: 100%;
+			height: auto;
+			overflow: hidden;
+			&-wrap {
+				margin-bottom: rem-calc(15);
+			}
+
+		}
+		&__info { 
+			text-align: center;
+			
+		}
+		&__title {
+			@include text(30, $white);
+		}
+		&__text {
+			padding: 0 rem-calc(8); 
+			display: inline-block;
+			color: $light-text;
+			font-size: rem-calc(14);
+			font-weight: 400;
+			line-height: rem-calc(24);
+			text-transform: uppercase;
+			letter-spacing: rem-calc(0.35);
+			text-align: center;
+			position: relative;
+			@include corner(9, $light-text) {
+				opacity: .23;
+			};
+		}
+	}
+}
