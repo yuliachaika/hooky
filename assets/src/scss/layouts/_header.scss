@@ -1,5 +1,8 @@
 .header {
-  background-color: white; 
+  width: 100%; 
+  // position: fixed;
+  // background-color: white;
+  // z-index: 50; 
   &__row { 
     padding: rem-calc(24) 0;
     
@@ -11,8 +14,7 @@
       @include flex-grid-column(12, $grid-column-gutter);
       padding: 0 0 rem-calc(20) rem-calc(34);  
       @include row();
-      transition: opacity .3s ease-in;
-      
+      transition: opacity .3s ease-in; 
     }
     &:hover {
       opacity: .6; 

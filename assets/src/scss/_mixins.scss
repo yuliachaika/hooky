@@ -8,7 +8,6 @@
   letter-spacing: rem-calc(0.75);
 }
 
-
 @mixin text($px, $color) {
   color: $color;
   font-family: $primary-font-family; 
@@ -17,6 +16,7 @@
   line-height: rem-calc(24);
   letter-spacing: rem-calc(0.38); 
 }
+
 
 @mixin corner($px, $color) {
   &::before {
@@ -39,6 +39,31 @@
     border-right: 1px solid $color;   
     bottom: 0;
     right: 0; 
+    @content; 
+  }
+}
+
+@mixin corner-title($px, $color) {
+  &::before {
+    content: '';
+    position: absolute;
+    width: rem-calc($px);
+    height: rem-calc($px);
+    border-top: 1px solid $color;
+    border-left: 1px solid $color;   
+    top: -20%;
+    left: 20%;
+    @content;  
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: rem-calc($px);
+    height: rem-calc($px);
+    border-bottom: 1px solid $color;
+    border-right: 1px solid $color;   
+    bottom: -20%;
+    right: 14%; 
     @content; 
   }
 }
@@ -114,4 +139,43 @@
       }
     } 
 }
+
+@mixin btn($color) {
+  display: block; 
+  padding: 0 rem-calc(35);
+  min-width: rem-calc(112); 
+  transition-property: background-color;
+  transition-duration: .5s;
+  transition-timing-function: ease-out;
+   @if $color == $red {
+      height: rem-calc(90);  
+      background-color: $red;
+      @include title(25, $white);
+      line-height: rem-calc(90); 
+      text-transform: none;
+      letter-spacing: rem-calc(0.63);
+      &:hover {
+        cursor: pointer;
+        background-color: $dark-gray; 
+      }  
+    } @else {
+      height: rem-calc(45);  
+      background-color: $dark-gray; ;
+      @include title(15, $white);
+      line-height: rem-calc(45); 
+      letter-spacing: rem-calc(0.38); 
+      &:hover {
+        cursor: pointer;
+        background-color: $red; 
+      }  
+    }
+}
+
+
+
+
+
+
+
+
 
