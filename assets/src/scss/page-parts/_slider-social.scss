@@ -79,9 +79,8 @@
       text-align: center;
       &--color {
         color: $red;
-        transition: color .3s ease-out;
         &:hover {
-          color: $medium-gray;
+          color: $primary-color;
         }
       }
     }

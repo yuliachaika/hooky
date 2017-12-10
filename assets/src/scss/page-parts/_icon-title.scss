@@ -23,7 +23,7 @@
 		line-height: 1;
 		text-align: center; 
 		position: relative;
-		@include corner(45, $dark-gray) {
+		@include corner(45, $dark-gray, 0, 0, 0, 0) {
 			opacity: .25; 
 		};
 		transition: color .3s ease; 

@@ -50,7 +50,7 @@
       letter-spacing: 0.38px;
       display: inline-block;
       position: relative;
-      @include corner(5, $gray);
+      @include corner(5, $gray, 0, 0, 0, 0);
     }
   }
   &__img-col {

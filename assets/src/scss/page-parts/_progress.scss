@@ -1,3 +1,4 @@
+
 .progress {
 	@include row();
 	flex-wrap: nowrap; 
@@ -9,15 +10,24 @@
 		@include col();
 		&--first {
 			z-index: 2; 
-			transform: translateX(-110px);
+			@include breakpoint(large down) {
+				transform: translateX(rem-calc(-125));
+			}
+			transform: translateX(rem-calc(-105));
 		}
 		&--middle {
 			z-index: 3; 
-			transform: translateX(-220px);
+			@include breakpoint(large down) {
+				transform: translateX(rem-calc(-250));
+			}
+			transform: translateX(rem-calc(-215));
 		}
 		&--last {
 			z-index: 4; 
-			transform: translateX(-330px);
+			@include breakpoint(large down) {
+				transform: translateX(rem-calc(-375));
+			}
+			transform: translateX(rem-calc(-325));
 		}
 	}
 	&-title {
@@ -39,13 +49,20 @@
 		}
 	}
 	&-img {
-		padding: 0 0 rem-calc(15) rem-calc(10); 
+		padding: 0 rem-calc(10) rem-calc(15) rem-calc(10); 
 		@include row();
 		align-items: flex-end;
-
-		width: 210px;
-		height: 365px;
 		position: relative;
+			width: rem-calc(212);
+			height: rem-calc(385);
+		@include breakpoint(large down) {
+			width: rem-calc(200);
+			height: rem-calc(385);
+		}
+		@include breakpoint(large) {
+			width: rem-calc(212);
+			height: rem-calc(385);
+		}
 		@include progress(1);
 		&--first {
 			@include progress(.8);

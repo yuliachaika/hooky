@@ -9,13 +9,23 @@
 			width: 100%; 
 			@include row();
 			justify-content: center;
+			@include breakpoint(small up) {
+				padding: 0 rem-calc(20); 
+
+			}
+			@include breakpoint(large) {
+				padding: 0; 		
+			}
 		}
 	}
 	&-img {
 		width: 100%;
 		height: auto;
 		overflow: hidden;
-		padding: 0 1.5px;
+		padding: rem-calc(1.5);
+		display: block;
+		margin: 0 auto;
+		filter: grayscale(80%);
 		&__overlay {
 			width: 100%;
 			height: 100%;
@@ -26,6 +36,9 @@
 			opacity: 0;
 			transition: all 0.4s ease; 
 			transition-delay: .1s;
+			@include breakpoint(medium down) {
+				display: none;		
+			}
 			&--hide {
 				background: rgba(0, 0, 0, .5);
 				height: 100%; 
@@ -36,7 +49,7 @@
 				top: 50%;
 				left: 0;
 				right: 0;	
-				@include text(15, $white); ///
+				@include text(15, $white); 
 				text-transform: uppercase;
 				letter-spacing: 0.6px;
 				text-align: center;
@@ -44,87 +57,93 @@
 			}
 		}
 		&--wide {
-			opacity: 0;
+			opacity: 0; 
 		} 
 		&__wrap {
 			position: relative; 
+			filter: grayscale(80%);
 			transition: all 0.4s ease;
-			@include breakpoint(small only) {
-				padding-bottom: rem-calc(15); 
-				width: 100%; 
-				text-align: center;
-			}
-			@include breakpoint(medium down) {
-				padding-bottom: rem-calc(15); 
-				width: 50%; 
-				// text-align: center;
-			}
-			@include breakpoint(medium) {
-				width: 30%; 
-				text-align: center;
-			}
-			@include breakpoint(large) {
-				margin: 0; 
-				padding-bottom: rem-calc(3); 
-				width: 20%; 
-			}
-			&:hover {
-				transition: all 0.4s ease;
-				cursor: pointer;
-				&::before {
-					content: '';
-					position: absolute;
-					width: rem-calc(90);
-					height: rem-calc(90);
-					@include breakpoint(medium down) {
-						width: rem-calc(40);
-						height: rem-calc(40);
-					}  
-					border-top: 1px solid $white;
-					border-left: 1px solid $white;   
-					top: rem-calc(40);
-					left: rem-calc(40);
-					z-index: 10; 
-				}
-				&::after {
-					content: '';
-					position: absolute;
-					width: rem-calc(90);
-					height: rem-calc(90);
-					border-bottom: 1px solid $white;
-					border-right: 1px solid $white;
-					@include breakpoint(medium down) {
-						width: rem-calc(40);
-						height: rem-calc(40);
-					}  
-					bottom: rem-calc(40);
-					right: rem-calc(40); 
-				}
-				& .gallery-img__overlay {
-					opacity: 1;
-					transition: all 0.4s ease-out;
-				}
-			}
-			&--wide {
-				@include breakpoint(medium down) {
-					width: 100%; 
-					margin-bottom: rem-calc(15); 
-				}
-				@include breakpoint(medium) {
-					margin-bottom: 0; 
-					width: 50%; 
-				}
-			}
 			&--left {
 				@include bg('../img/gallery-wide-1.png');
-
 			}
 			&--right {
 				@include bg('../img/gallery-wide.png');
 				background-color: $black;
+			}
+			&:hover { 
+				@include breakpoint(medium up) {
+					transition: all 0.4s ease;
+					cursor: pointer;
+					&::before {
+						content: '';
+						position: absolute;
+						width: rem-calc(70);
+						height: rem-calc(70);
+						@include breakpoint(medium down) {
+							width: rem-calc(0);
+							height: rem-calc(0);
+							border: none; 
+						}  
+						border-top: 1px solid $white;
+						border-left: 1px solid $white;   
+						top: rem-calc(40);
+						left: rem-calc(40);
+						z-index: 10; 
+					}
+					&::after {
+						content: '';
+						position: absolute;
+						width: rem-calc(70);
+						height: rem-calc(70);
+						border-bottom: 1px solid $white;
+						border-right: 1px solid $white;
+						@include breakpoint(medium down) {
+							width: rem-calc(0);
+							height: rem-calc(0);
+							border: none; 
+						}  
+						bottom: rem-calc(40);
+						right: rem-calc(40); 
+					}
+					& .gallery-img__overlay {
+						opacity: 1;
+						transition: all 0.4s ease-out;
+					}
+				}
 
 			}
-
+		}
+		&__item { 
+			position: relative;
+			&-narrow {
+				@include breakpoint(small) {
+					padding: rem-calc(15) rem-calc(80); //slick
+					width: 80%; 
+					text-align: center;
+				}
+				@include breakpoint(medium) {
+					padding: rem-calc(15) rem-calc(10);  //slick
+					width: 40%; 
+					text-align: center;
+				}
+				@include breakpoint(large) {
+					padding: 0;  
+					width: 20%; 
+					text-align: center;
+				}
+				
+			}
+			&-wide {
+				@include breakpoint(small) {
+					padding: rem-calc(15); 
+					width: 100%; 
+					text-align: center;
+				}
+				@include breakpoint(large) {
+					padding: rem-calc(1.5); 
+					width: 50%; 
+				}
+			}
 		}
 	}
 }

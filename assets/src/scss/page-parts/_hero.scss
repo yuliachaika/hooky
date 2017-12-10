@@ -1,8 +1,7 @@
 .hero {
   width: 100%; 
 	position: relative;
-	height: calc(100vh - 100px); 
-	min-height: 80vh;
+	height: calc(100vh); 
 	@include bg('../img/hero.png');
 	@include breakpoint(large) {
 		background-attachment: fixed; 

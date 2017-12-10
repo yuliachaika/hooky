@@ -35,16 +35,18 @@
       align-self: center;
     }
     &--hover {
+      border: 1px solid transparent; 
+      transition: all .4s ease-in; 
       &:hover {
         @include breakpoint(large) {
-          @include corner(5, $red); 
+          @include corner(5, $red, 0, 0, 0, 0); 
         } 
       } 
     }
     &:hover {
       color: $red;
       @include breakpoint(large) {
-        @include corner(5, $red); 
+        @include corner(5, $red, 0, 0, 0, 0); 
       }  
     }
 
@@ -105,7 +107,7 @@
     letter-spacing: 0.38px;
     display: block;
     position: relative;
-    @include breakpoint(large) {
+    @include breakpoint(large) { 
       padding: rem-calc(5) !important;
     }
     &::after {
@@ -121,7 +123,6 @@
     }
   }
   &__input {
-
     margin: 0; 
     width: 0;
     border: none; 
@@ -143,6 +144,9 @@
       font-size: rem-calc(20);
       line-height: 48px; 
       font-weight: 400;
+      &:hover {
+        color: $red; 
+      }
       @include breakpoint(large) {
         padding-left: rem-calc(10);
       }
