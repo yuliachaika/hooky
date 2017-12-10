@@ -19563,6 +19563,7 @@ module.exports = __webpack_require__(26);
         //Foundation init
         $(document).foundation();
 
+
         //slick for hero
         $(".slider").slick({
           infinite: true,
@@ -19632,7 +19633,7 @@ module.exports = __webpack_require__(26);
           arrows: false,
           responsive: [
           {
-            breakpoint: 1039,
+            breakpoint: 1040,
             settings: {
               slidesToShow: 3,
               slidesToScroll: 1,
@@ -19655,7 +19656,7 @@ module.exports = __webpack_require__(26);
             }
           }
           ]
-         }
+        }
 
          // // gallery second slider
          $slickSliderWide = $('.gallery__wrap-row--wide');
@@ -19672,7 +19673,7 @@ module.exports = __webpack_require__(26);
         // slick on mobile
         function slickOnMobile(slider, settings){
           $(window).on('load resize', function() {
-            if ($(window).width() > 1039) {
+            if ($(window).width() > 1038) {
               if (slider.hasClass('slick-initialized')) {
                 slider.slick('unslick');
               }
@@ -19692,10 +19693,203 @@ module.exports = __webpack_require__(26);
 
         //three-col-toggler 
         $('.three-col-col__wrap').on('click', function() {
-        $('.three-col-col').find('.three-col-col__wrap--hover').removeClass('three-col-col__wrap--hover');
-        $( this ).addClass('three-col-col__wrap--hover');
-        console.log(this);
-});
+          $('.three-col-col').find('.three-col-col__wrap--hover').removeClass('three-col-col__wrap--hover');
+          $( this ).addClass('three-col-col__wrap--hover');
+          console.log(this);
+        });
+
+        //map
+
+        function initMap() {
+          var map;
+          var mapContainer = $('#map')[0];
+          var myCenter = {lat: 42.3556595, lng: -71.060074};
+          map = new google.maps.Map(mapContainer, {
+            center: myCenter,
+            zoom: 15,
+            styles: [
+            {
+              "elementType": "geometry",
+              "stylers": [
+              {
+                "color": "#f5f5f5"
+              }
+              ]
+            },
+            {
+              "elementType": "labels.icon",
+              "stylers": [
+              {
+                "visibility": "off"
+              }
+              ]
+            },
+            {
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                "color": "#616161"
+              }
+              ]
+            },
+            {
+              "elementType": "labels.text.stroke",
+              "stylers": [
+              {
+                "color": "#f5f5f5"
+              }
+              ]
+            },
+            {
+              "featureType": "administrative.land_parcel",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                "color": "#bdbdbd"
+              }
+              ]
+            },
+            {
+              "featureType": "poi",
+              "elementType": "geometry",
+              "stylers": [
+              {
+                "color": "#eeeeee"
+              }
+              ]
+            },
+            {
+              "featureType": "poi",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                "color": "#757575"
+              }
+              ]
+            },
+            {
+              "featureType": "poi.park",
+              "elementType": "geometry",
+              "stylers": [
+              {
+                "color": "#e5e5e5"
+              }
+              ]
+            },
+            {
+              "featureType": "poi.park",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                "color": "#9e9e9e"
+              }
+              ]
+            },
+            {
+              "featureType": "road",
+              "elementType": "geometry",
+              "stylers": [
+              {
+                "color": "#ffffff"
+              }
+              ]
+            },
+            {
+              "featureType": "road.arterial",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                "color": "#757575"
+              }
+              ]
+            },
+            {
+              "featureType": "road.highway",
+              "elementType": "geometry",
+              "stylers": [
+              {
+                "color": "#dadada"
+              }
+              ]
+            },
+            {
+              "featureType": "road.highway",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                "color": "#616161"
+              }
+              ]
+            },
+            {
+              "featureType": "road.local",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                "color": "#9e9e9e"
+              }
+              ]
+            },
+            {
+              "featureType": "transit.line",
+              "elementType": "geometry",
+              "stylers": [
+              {
+                "color": "#e5e5e5"
+              }
+              ]
+            },
+            {
+              "featureType": "transit.station",
+              "elementType": "geometry",
+              "stylers": [
+              {
+                "color": "#eeeeee"
+              }
+              ]
+            },
+            {
+              "featureType": "water",
+              "elementType": "geometry",
+              "stylers": [
+              {
+                "color": "#c9c9c9"
+              }
+              ]
+            },
+            {
+              "featureType": "water",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                "color": "#9e9e9e"
+              }
+              ]
+            }
+            ],
+            mapTypeControl: true,
+            mapTypeControlOptions: {
+              style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+              position: google.maps.ControlPosition.TOP_RIGHT
+            },
+            scaleControl: true,
+            streetViewControl: true,
+            streetViewControlOptions: {
+              position: google.maps.ControlPosition.LEFT_TOP
+            },
+            zoomControl: true,
+            zoomControlOptions: {
+              position: google.maps.ControlPosition.LEFT_CENTER
+            },
+            fullscreenControl: true,
+            fullscreenControlOptions: {
+              position: google.maps.ControlPosition.TOP_LEFT
+            }
+          });
+
+        };
+
+        initMap();
 
 
 

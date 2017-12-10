@@ -22,6 +22,9 @@
 			transition-property: background-color, opacity, transform;
   		transition-duration: .5s;
   		transition-timing-function: ease-out;
+  		&:hover {
+  			cursor: pointer;
+  		}
   		&--hover {
   			opacity: 1;
 				transform: translateY(0px);
@@ -79,19 +82,16 @@
 				width: 100%; 
 				background-color: $white;
 				position: relative;
-				@include corner-title(60, $dark-gray) { //сделать только для не ховера
-						opacity: 0.4; 	//для ховер - .4
+				@include corner-title(60, $dark-gray) {
+						opacity: 0.4; 	
 					};
 			} 
 		}
 				&__list {
 			padding-left: 0;
 			list-style: none;
-			opacity: 0;//для не ховер для ховер - 1
+			opacity: 0;
 			transition: all .5s ease; 
-			// &--hover {
-			// 	opacity: 1; 
-			// }
 			&-item {
 				@include text(18, $dark-gray)
 				opacity: 0.69;
@@ -104,184 +104,13 @@
 		&__btn {
 			width: 100%;
 			@include btn($red);
-			opacity: 0; //не ховер
-			// transition-delay: 1s;
-			&--hover {
-				// opacity: 1; //ховер переделать под один  класс
-			}
+			opacity: 0;
+			// transition: all, .4s ease-in;
+			// &:hover {
+			// 	box-shadow: 0 rem-calc(90) 0 0  rgba(0,0,0,0.25) inset, 0 rem-calc(-90) 0 0  rgba(0,0,0,0.25) inset;
+			// 	color: $white; 
+			// }	
 		}
-
-
-
 	}
-
-
-
-
-
 }
-
-
-
-
-
-// .three-col {
-// 	 background-color: pink; 
-// 	&__row {
-// 		@include flex-grid-row();
-// 		justify-content: center;
-// 	}
-// 	&-col {
-// 		border: 1px solid;
-// 		text-align: center;
-// 		@include flex-grid-column(9);
-// 		@include breakpoint(medium down) {
-// 			margin-bottom: rem-calc(30); 
-// 		}
-// 		@include breakpoint(medium only) {
-// 			@include flex-grid-column(7);
-
-// 		}
-// 		@include breakpoint(large) {
-// 			@include flex-grid-column(4, rem-calc(20));
-// 		}
-// 		&__wrap {
-// 			border: 1px solid brown;
-// 			// background-color: pink; 
-// 			opacity: .5; //не ховер
-// 			transform: translateY(90px); //не ховер
-// 			transition-property: background-color, opacity, transform;
-//   		transition-duration: .5s;
-//   		transition-timing-function: ease-out;
-// 			&--hover {
-// 				opacity: 1; //ховер
-// 				transform: translateY(0px); //ховер
-// 				background-color: $light-gray;
-// 				& .three-col-col__list {
-// 					opacity: 1; 
-// 				}
-// 				& .three-col-col__btn {
-// 					opacity: 1;
-// 				}
-// 				& .three-col-col__info-wrap {
-// 					@include corner(60, $dark-gray) {
-// 						opacity: 0; 
-// 					};
-// 				}
-// 			}
-// 	// 		// &:hover {
-// 	// 		// 	opacity: 1;
-// 	// 		// 	transform: translateY(0px);
-// 	// 		// 	background-color: $light-gray;
-// 	// 		// 	& .three-col-col__list {
-// 	// 		// 		opacity: 1; 
-// 	// 		// 	}
-// 	// 		// 	& .three-col-col__btn {
-// 	// 		// 		opacity: 1;
-// 	// 		// 	}
-// 	// 		// 	& .three-col-col__info-wrap {
-// 	// 		// 		@include corner(60, $dark-gray) {
-// 	// 		// 			opacity: 0; 
-// 	// 		// 		};
-// 	// 		// 	}
-// 	// 		// }
-			
-			 
-// 	// 	}
-// 		&__title {
-// 			@include text(25, $primary-color);
-// 			text-transform: uppercase;
-// 			letter-spacing: 0.63px;
-// 			&-wrap {
-// 				padding: rem-calc(44) 0;
-// 				width: 100%;
-// 			}
-// 		}
-// 		&__info {
-// 			padding: 0 rem-calc(20); 
-// 			display: inline-block;
-// 			background-color: $white; 
-// 			@include title(75, $red);
-// 			padding-bottom: 0;
-// 			letter-spacing: 1.88px;
-// 			line-height: 1;
-// 			position: relative;
-// 			&::before {
-// 				content: '$';
-// 				position: absolute;
-// 				@include title(30, $dark-gray);
-//         opacity: 0.5; 
-// 				top: 0;
-// 				left: 0;   
-// 			} 
-// 			&::after {
-// 				content: '/ year';
-// 				position: absolute;
-// 				@include text(18, $dark-gray);
-// 				text-transform: lowercase;
-//         opacity: 0.5; 
-// 				bottom: 0;
-// 				right: -30%;   
-// 			} 
-// 			&-wrap {
-// 				// border: 1px solid green; 
-// 				padding: rem-calc(10) 0;
-// 				width: 100%; 
-// 				background-color: $white;
-// 				position: relative;
-// 				@include corner(60, $dark-gray) {
-// 						opacity: .4; 	
-// 					};
-// 				&--hover {  //что это???
-// 					@include corner(60, $dark-gray) {
-// 						opacity: 0; 
-// 					};
-				
-// 					display: inline-block;
-// 					margin: 0 auto;
-// 					padding: rem-calc(46) rem-calc(90) rem-calc(46) rem-calc(46);
-// 					border: 1px solid red;
-					
-// 					@include corner(60, $dark-gray) {
-// 						opacity: .4; 
-// 					};
-// 				}
-				
-				
-// 			}
-// 		}
-// 		&__list {
-// 			padding-left: 0;
-// 			list-style: none;
-// 			opacity: 0;
-// 			transition: all .5s ease; 
-// 			&--hover {
-// 				opacity: 1; 
-// 			}
-// 			&-item {
-// 				@include text(18, $dark-gray)
-// 				opacity: 0.69;
-// 				line-height: rem-calc(60);
-// 				letter-spacing: rem-calc(0.45);
-// 			}
-// 			&-wrap { 
-// 			}
-// 		}
-// 		&__btn {
-// 			width: 100%;
-// 			@include btn($red);
-// 			// opacity: 0; //не ховер
-// 			// transition-delay: 1s;
-// 			&--hover {
-// 				opacity: 1; //ховер переделать под один  класс
-// 			}
-// 		}
-// 	}
-// }
-
-// }
-
-
-
-
 

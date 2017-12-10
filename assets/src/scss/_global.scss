@@ -8,12 +8,12 @@ html {
   }
 }
 
-a, button, input  {
+a, button, input, textarea  {
 	cursor: pointer;
   transition:
-  border-color .1s ease-in,
-  color .1s ease-in,
-  background-color .1s ease-in;
+  border-color .4s ease-in,
+  color .4s ease-in,
+  background-color .4s ease-in;
   &:focus {
     outline: none; 
   }

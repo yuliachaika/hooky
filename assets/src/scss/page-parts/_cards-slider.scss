@@ -10,6 +10,7 @@
 		width: 100%; 
 	}
 	&-slide {
+		margin-bottom: rem-calc(30); 
 		&__wrap {
 			padding-bottom: rem-calc(20); 
 			max-width: rem-calc(370);
@@ -50,7 +51,7 @@
 			letter-spacing: rem-calc(0.35);
 			text-align: center;
 			position: relative;
-			@include corner(9, $light-text) {
+			@include corner(9, $light-text, 0, 0, 0, 0) {
 				opacity: .23;
 			};
 		}
