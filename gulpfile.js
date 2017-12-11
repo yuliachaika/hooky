@@ -23,7 +23,7 @@ const compatability = [
 
 //Compile scss to css
 gulp.task('sass', function () {
-    return gulp.src('./assets/src/scss/*.scss')
+    return gulp.src(['./assets/src/scss/*.scss', 'assets/components/animate.css/animate.css'])
         .pipe(sourcemaps.init())
         .pipe(sass(
             {outputStyle: 'compressed',
