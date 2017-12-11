@@ -6,9 +6,6 @@
 	<title>Hooky</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="assets/dist/img/fav.png">
-  <!--   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/> -->
-  <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/> -->
-
   <link rel="stylesheet" href="assets/dist/css/style.css">
 
 </head>
@@ -18,7 +15,7 @@
   </div>
   <header class="header">
     <div class="header__row">
-      <a href="#" class="header__logo" target="_blank"><img src="assets/dist/img/logo.png"></a>
+      <a href="#" id="home" class="header__logo" target="_blank"><img src="assets/dist/img/logo.png"></a>
       <!-- /.logo -->
       <nav class="header__nav nav-primary">
 
@@ -30,21 +27,21 @@
         <div class="menu-wrap" id="responsive-menu">
 
           <ul class="menu" data-responsive-menu="drilldown large-dropdown">
-            <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">About</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Work</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Pricing</a></li>
+            <li class="menu__item"><a class="menu__link" href="#home">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="#about">About</a></li>
+            <li class="menu__item"><a class="menu__link" href="#work">Work</a></li>
+            <li class="menu__item"><a class="menu__link" href="#team">Team</a></li>
+            <li class="menu__item"><a class="menu__link" href="#pricing">Pricing</a></li>
             <li class="menu__item menu__item--hover">
-              <a class="menu__link" href="#0">Blog</a>
+              <a class="menu__link" href="#blog">Blog</a>
               <ul class="menu__sub menu">
-                <li class="menu__sub-item"><a class="menu__sub-link" href="#0">Typography </a></li>
-                <li class="menu__sub-item"><a class="menu__sub-link" href="#0">Design </a></li>
-                <li class="menu__sub-item"><a class="menu__sub-link" href="#0">Interview </a></li>
-                <li class="menu__sub-item"><a class="menu__sub-link" href="#0">Development</a></li>
+                <li class="menu__sub-item"><a class="menu__sub-link" href="#blog">Typography </a></li>
+                <li class="menu__sub-item"><a class="menu__sub-link" href="#blog">Design </a></li>
+                <li class="menu__sub-item"><a class="menu__sub-link" href="#blog">Interview </a></li>
+                <li class="menu__sub-item"><a class="menu__sub-link" href="#blog">Development</a></li>
               </ul>
             </li>
-            <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+            <li class="menu__item"><a class="menu__link" href="#contact">Contact</a></li>
             <li class="menu__item menu__item--hide">
               <label class="menu__input-label">
                 <span class="menu__input-icon">
@@ -111,7 +108,7 @@
     </section>
     <!-- /.hero -->
 
-    <section class="title-text">
+    <section class="title-text wow fadeInUp" id="about">
       <div class="title-text__row">
         <div class="title-text__col">
           <div class="title-text__wrap">
@@ -124,7 +121,7 @@
     </section>
     <!-- /.title-text -->
 
-    <section class="info-images">
+    <section class="info-images wow fadeInUp">
       <div class="info-images__row">
         <div class="info-images__text-col">
           <div class="info-images__text-col-wrap">
@@ -190,7 +187,7 @@
         <!-- /.grid-col -->
 
 
-        <div class="two-col-grid-progress__progress-col progress">
+        <div class="two-col-grid-progress__progress-col progress wow fadeIRight">
           <!-- <div class="progress__wrap"> -->
           <div class="progress__item">
             <div class="progress-title">
@@ -238,7 +235,7 @@
     </section>
     <!-- /._two-col-grid-progress -->
     
-    <section class="title-text">
+    <section class="title-text wow fadeInDown" id="work">
       <div class="title-text__row">
         <div class="title-text__col">
           <div class="title-text__wrap">
@@ -251,7 +248,7 @@
     </section>
     <!-- /.title-text -->
 
-    <section class="gallery">
+    <section class="gallery wow fadeInDown">
 
       <div class="gallery__wrap">
         <div class="gallery__wrap-row gallery__wrap-row--narrow">
@@ -370,7 +367,7 @@
     </section>
     <!-- /.counter-box -->
 
-    <section class="title-text">
+    <section class="title-text wow fadeInUp" id="team">
       <div class="title-text__row">
         <div class="title-text__col">
           <div class="title-text__wrap">
@@ -383,7 +380,7 @@
     </section>
     <!-- /.title-text -->
 
-    <section class="cards-slider">
+    <section class="cards-slider wow fadeInUp">
       <div class="cards-slider__row">
         <div class="cards-slider__slider">
 
@@ -491,7 +488,7 @@
     </section>
     <!-- /.slider-social -->
     
-    <section class="title-text">
+    <section class="title-text wow fadeInDown" id="pricing">
       <div class="title-text__row">
         <div class="title-text__col">
           <div class="title-text__wrap">
@@ -504,7 +501,7 @@
     </section>
     <!-- /.title-text -->
 
-    <section class="three-col">
+    <section class="three-col wow fadeInDown">
       <div class="three-col__row">
         <div class="three-col-col">
           <div class="three-col-col__wrap">
@@ -587,20 +584,20 @@
     </section>
     <!-- /.three-col -->
 
-    <section class="title-text">
-  <div class="title-text__row">
-    <div class="title-text__col">
-      <div class="title-text__wrap">
-        <h2 class="title-text__title">Creative <span class="title-text__title title-text__title--color">news</span></h2>
-        <p class="title-text__text"> When, while the lovely valley teems with vapour around me</p>
+    <section class="title-text wow fadeInUp" id="blog">
+      <div class="title-text__row">
+        <div class="title-text__col">
+          <div class="title-text__wrap">
+            <h2 class="title-text__title">Creative <span class="title-text__title title-text__title--color">news</span></h2>
+            <p class="title-text__text"> When, while the lovely valley teems with vapour around me</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <!-- /.title-text__row -->
+      <!-- /.title-text__row -->
     </section>
     <!-- /.title-text -->
 
-    <section class="article-sidebar">
+    <section class="article-sidebar wow fadeInUp">
       <div class="article-sidebar__row">
         <div class="article-sidebar__content content">
           <div class="content__wrap">
@@ -699,7 +696,7 @@
     </section>
     <!-- /.article-sidebar -->
 
-    <section class="title-text">
+    <section class="title-text wow fadeInUp" id="contact">
       <div class="title-text__row">
         <div class="title-text__col">
           <div class="title-text__wrap">
@@ -772,11 +769,6 @@
 
   </main>
 
-
-
-
-
-      <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script> -->
     <script async="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWL00d4OgxS7nhAFiO8zvKYYhnjIa0gKg&amp;language=en&amp;region=US">
     </script>
     <script src="assets/dist/javascript/global.js"></script>

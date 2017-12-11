@@ -20073,6 +20073,17 @@ module.exports = __webpack_require__(26);
         //Foundation init
         $(document).foundation();
 
+        //wow init
+        new WOW().init();
+
+        //scroll
+        $(".menu").on("click","a", function (event) {
+          event.preventDefault();
+          $('html, body').animate({
+           scrollTop: $($(this).attr('href')).offset().top
+         }, 500);
+        });
+
 
         //slick for hero
         $(".slider").slick({
@@ -20195,7 +20206,7 @@ module.exports = __webpack_require__(26);
           });
         };
 
-        //counter
+        // counter
         $('.counter').counterUp({
           delay: 10,
           time: 2000

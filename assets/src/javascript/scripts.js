@@ -15,6 +15,17 @@
         //Foundation init
         $(document).foundation();
 
+        //wow init
+        new WOW().init();
+
+        //scroll
+        $(".menu").on("click","a", function (event) {
+          event.preventDefault();
+          $('html, body').animate({
+           scrollTop: $($(this).attr('href')).offset().top
+         }, 500);
+        });
+
 
         //slick for hero
         $(".slider").slick({
@@ -137,7 +148,7 @@
           });
         };
 
-        //counter
+        // counter
         $('.counter').counterUp({
           delay: 10,
           time: 2000
