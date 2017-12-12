@@ -10,22 +10,44 @@
     $preloader.delay(350).fadeOut('slow');
   });
 
+  //scroll
+  function isScrolledIntoView(elem) {
+    if (elem.length) {
+      var docViewTop = $(window).scrollTop();
+      var docViewBottom = docViewTop + $(window).height();
+
+      var elemTop = $(elem).offset().top;
+      var elemBottom = elemTop + $(elem).height();
+
+      return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    }
+    return false;
+  };
+
+  //animate
+  $(document).on( 'scroll', function () {
+        const sectionTitle = $('.animate');
+
+        sectionTitle.each( function () {
+            if ( isScrolledIntoView($(this)) ) {
+                $(this).addClass('animate--right');
+            }
+        });
+
+  });
+
   $(document).ready( function () {
 
         //Foundation init
         $(document).foundation();
 
-        //wow init
-        new WOW().init();
-
         //scroll
-        $(".menu").on("click","a", function (event) {
+        $(".menu-list").on("click","a", function (event) {
           event.preventDefault();
           $('html, body').animate({
            scrollTop: $($(this).attr('href')).offset().top
          }, 500);
         });
-
 
         //slick for hero
         $(".slider").slick({
@@ -89,49 +111,49 @@
         });
 
         //slick for gallery
-        // gallery first slider
-        $slickSlider = $('.gallery__wrap-row--narrow');
-        settingsSlider = {
-          dots: true,
-          arrows: false,
-          responsive: [
-          {
-            breakpoint: 1040,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 1,
-              infinite: true,
-            }
-          },
+          // gallery first slider
+          $slickSlider = $('.gallery__wrap-row--narrow');
+          settingsSlider = {
+            dots: true,
+            arrows: false,
+            responsive: [
+            {
+              breakpoint: 1040,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+              }
+            },
 
-          {
-            breakpoint: 766,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1,
-              infinite: true,
+            {
+              breakpoint: 766,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+              }
+            },
+            {
+              breakpoint: 635,
+              settings: {
+                slidesToShow: 1,
+              }
             }
-          },
-          {
-            breakpoint: 635,
-            settings: {
-              slidesToShow: 1,
-            }
+            ]
           }
-          ]
-        }
 
-         // // gallery second slider
-         $slickSliderWide = $('.gallery__wrap-row--wide');
-         settingsSliderWide = {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-          arrows: false
-        }
-        slickOnMobile( $slickSlider, settingsSlider);
-        slickOnMobile( $slickSliderWide, settingsSliderWide);
+          // gallery second slider
+          $slickSliderWide = $('.gallery__wrap-row--wide');
+          settingsSliderWide = {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+            arrows: false
+          }
+          slickOnMobile( $slickSlider, settingsSlider);
+          slickOnMobile( $slickSliderWide, settingsSliderWide);
 
         // slick on mobile
         function slickOnMobile(slider, settings){
@@ -158,11 +180,10 @@
         $('.three-col-col__wrap').on('click', function() {
           $('.three-col-col').find('.three-col-col__wrap--hover').removeClass('three-col-col__wrap--hover');
           $( this ).addClass('three-col-col__wrap--hover');
-          console.log(this);
         });
 
-        //map
 
+        //map
         function initMap() {
           var map;
           var mapContainer = $('#map')[0];
@@ -350,13 +371,17 @@
             }
           });
 
-        };
+      };
 
-        initMap();
+      initMap();
 
-
-
-      });
+  });
 
 
 })(jQuery);
+
+
+
+
+
+

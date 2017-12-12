@@ -40,8 +40,7 @@
 		
 	}
 	&__text {
-		@include text(30, $white); ///
-		// font-size: rem-calc(30); 
+		@include text(30, $white); 
 		text-align: center;
 	}
 }

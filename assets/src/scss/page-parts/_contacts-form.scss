@@ -1,5 +1,5 @@
 .contacts-form {
-	padding-bottom: rem-calc(90);
+	padding-bottom: rem-calc(45);
  	&__row {
 		@include flex-grid-row();
 		justify-content: center;
@@ -77,65 +77,3 @@
 		}
 	}
 }
-
-
-// .contacts-form {
-// 	padding-bottom: rem-calc(90);
-//  	&__row {
-// 		@include flex-grid-row();
-// 		justify-content: center;
-// 	}
-// 	&__map {
-// 		width: 100%; 
-// 		height: rem-calc(300);
-// 		&-wrap {
-// 			width: 100%; 
-// 		} 
-// 	}
-// 	&__info {
-// 		border: 1px solid; 
-// 		padding-top: rem-calc(90); 
-// 		@include breakpoint(small) {
-// 			@include flex-grid-column(12, $grid-column-gutter);
-// 		}
-// 		@include breakpoint(medium) {
-// 			@include flex-grid-column(6);
-// 		}
-// 		&-wrap {
-			
-// 		}
-// 	}
-// 	&__form {
-// 		&-wrap {
-// 			@include breakpoint(small) {
-// 				@include flex-grid-column(12, $grid-column-gutter);
-// 				justify-content: center;
-// 			}
-// 			@include breakpoint(medium) {
-// 				@include flex-grid-column(6);
-// 			}
-// 		}
-// 	}
-// 	&__info {
-// 		@include col();
-// 		align-items: center;
-// 		&-name {
-// 			@include title(18, $gray-text)
-// 			padding: 0;
-// 			letter-spacing: rem-calc(0.45);
-// 		}
-// 		&-text {
-// 			@include text(15, $primary-color);
-// 		}
-// 	}
-// }
-
-
-
-
-
-
-
-
-
-

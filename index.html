@@ -15,7 +15,9 @@
   </div>
   <header class="header">
     <div class="header__row">
-      <a href="#" id="home" class="header__logo" target="_blank"><img src="assets/dist/img/logo.png"></a>
+      <a href="#" id="home" class="header__logo" target="_blank">
+        <img src="assets/dist/img/logo.png">
+      </a>
       <!-- /.logo -->
       <nav class="header__nav nav-primary">
 
@@ -26,7 +28,7 @@
 
         <div class="menu-wrap" id="responsive-menu">
 
-          <ul class="menu" data-responsive-menu="drilldown large-dropdown">
+          <ul class="menu menu-list" data-responsive-menu="drilldown large-dropdown">
             <li class="menu__item"><a class="menu__link" href="#home">Home</a></li>
             <li class="menu__item"><a class="menu__link" href="#about">About</a></li>
             <li class="menu__item"><a class="menu__link" href="#work">Work</a></li>
@@ -108,7 +110,7 @@
     </section>
     <!-- /.hero -->
 
-    <section class="title-text wow fadeInUp" id="about">
+    <section class="title-text" id="about">
       <div class="title-text__row">
         <div class="title-text__col">
           <div class="title-text__wrap">
@@ -121,7 +123,7 @@
     </section>
     <!-- /.title-text -->
 
-    <section class="info-images wow fadeInUp">
+    <section class="info-images">
       <div class="info-images__row">
         <div class="info-images__text-col">
           <div class="info-images__text-col-wrap">
@@ -187,7 +189,7 @@
         <!-- /.grid-col -->
 
 
-        <div class="two-col-grid-progress__progress-col progress wow fadeIRight">
+        <div class="two-col-grid-progress__progress-col progress animate">
           <!-- <div class="progress__wrap"> -->
           <div class="progress__item">
             <div class="progress-title">
@@ -235,7 +237,7 @@
     </section>
     <!-- /._two-col-grid-progress -->
     
-    <section class="title-text wow fadeInDown" id="work">
+    <section class="title-text" id="work">
       <div class="title-text__row">
         <div class="title-text__col">
           <div class="title-text__wrap">
@@ -248,7 +250,7 @@
     </section>
     <!-- /.title-text -->
 
-    <section class="gallery wow fadeInDown">
+    <section class="gallery">
 
       <div class="gallery__wrap">
         <div class="gallery__wrap-row gallery__wrap-row--narrow">
@@ -367,7 +369,7 @@
     </section>
     <!-- /.counter-box -->
 
-    <section class="title-text wow fadeInUp" id="team">
+    <section class="title-text" id="team">
       <div class="title-text__row">
         <div class="title-text__col">
           <div class="title-text__wrap">
@@ -380,54 +382,97 @@
     </section>
     <!-- /.title-text -->
 
-    <section class="cards-slider wow fadeInUp">
+    <section class="cards-slider">
       <div class="cards-slider__row">
         <div class="cards-slider__slider">
 
           <div class="cards-slider-slide">
             <div class="cards-slider-slide__wrap">
+            <div class="cards-slider-slide__card">
               <div class="cards-slider-slide__image-wrap">
                 <img class="cards-slider-slide__image" src="assets/dist/img/face-1.png" alt="John Doe">
               </div>
               <div class="cards-slider-slide__info">
                 <h4 class="cards-slider-slide__title">John Doe</h4>
-                <span class="cards-slider-slide__text">CEO</span>
+                <span class="cards-slider-slide__text">CEO</span> 
+                <ul class="cards-slider-slide__info-hide">
+                  <li class="cards-slider-slide__info-hide-item">
+                    <a href="#" target="_blank" class="cards-slider-slide__info-hide-link cards-slider-slide__info-hide-link--fb"><i class="icon ion-social-facebook"></i></a>
+                  </li>
+                  <li class="cards-slider-slide__info-hide-item">
+                    <a href="#" target="_blank" class="cards-slider-slide__info-hide-link cards-slider-slide__info-hide-link--ig"><i class="icon ion-social-instagram"></i></a>
+                  </li>
+                </ul>
+              </div>
               </div>
             </div>
           </div>
 
           <div class="cards-slider-slide">
             <div class="cards-slider-slide__wrap">
+            <div class="cards-slider-slide__card">
               <div class="cards-slider-slide__image-wrap">
                 <img class="cards-slider-slide__image" src="assets/dist/img/face-2.png" alt="Alex Hooky">
               </div>
               <div class="cards-slider-slide__info">
                 <h4 class="cards-slider-slide__title">Alex Hooky</h4>
                 <span class="cards-slider-slide__text">FreELANCER</span>
+                <ul class="cards-slider-slide__info-hide">
+                  <li class="cards-slider-slide__info-hide-item">
+                    <a href="#" target="_blank" class="cards-slider-slide__info-hide-link cards-slider-slide__info-hide-link--fb"><i class="icon ion-social-facebook"></i></a>
+                  </li>
+                  <li class="cards-slider-slide__info-hide-item">
+                    <a href="#" target="_blank" class="cards-slider-slide__info-hide-link cards-slider-slide__info-hide-link--wu"><i class="icon ion-social-whatsapp"></i></a>
+                  </li>
+                </ul>
+              </div>
               </div>
             </div>
           </div>
 
           <div class="cards-slider-slide">
             <div class="cards-slider-slide__wrap">
+            <div class="cards-slider-slide__card">
               <div class="cards-slider-slide__image-wrap">
                 <img class="cards-slider-slide__image" src="assets/dist/img/face-3.png" alt="Marie Smith">
               </div>
               <div class="cards-slider-slide__info">
                 <h4 class="cards-slider-slide__title">Marie Smith</h4>
                 <span class="cards-slider-slide__text">DESIGNER</span>
+                <ul class="cards-slider-slide__info-hide">
+                  <li class="cards-slider-slide__info-hide-item">
+                    <a href="#" target="_blank" class="cards-slider-slide__info-hide-link cards-slider-slide__info-hide-link--fb"><i class="icon ion-social-facebook"></i></a>
+                  </li>
+                  <li class="cards-slider-slide__info-hide-item">
+                    <a href="#" target="_blank" class="cards-slider-slide__info-hide-link cards-slider-slide__info-hide-link--ig"><i class="icon ion-social-instagram"></i></a>
+                  </li>
+                  <li class="cards-slider-slide__info-hide-item">
+                    <a href="#" target="_blank" class="cards-slider-slide__info-hide-link cards-slider-slide__info-hide-link--pin"><i class="icon ion-social-pinterest"></i></a>
+                  </li>
+                </ul>
+              </div>
               </div>
             </div>
           </div>
 
           <div class="cards-slider-slide">
             <div class="cards-slider-slide__wrap">
+            <div class="cards-slider-slide__card">
               <div class="cards-slider-slide__image-wrap">
                 <img class="cards-slider-slide__image" src="assets/dist/img/face-2.png" alt="John Doe">
               </div>
               <div class="cards-slider-slide__info">
                 <h4 class="cards-slider-slide__title">John Doe</h4>
                 <span class="cards-slider-slide__text">CEO</span>
+                <ul class="cards-slider-slide__info-hide">
+                  <li class="cards-slider-slide__info-hide-item">
+                    <a href="#" target="_blank" class="cards-slider-slide__info-hide-link cards-slider-slide__info-hide-link--fb"><i class="icon ion-social-facebook"></i></a>
+                  </li>
+                  <li class="cards-slider-slide__info-hide-item">
+                    <a href="#" target="_blank" class="cards-slider-slide__info-hide-link cards-slider-slide__info-hide-link--ig"><i class="icon ion-social-instagram"></i></a>
+                  </li>
+                </ul>
+              </div>
               </div>
             </div>
           </div>
@@ -488,7 +533,7 @@
     </section>
     <!-- /.slider-social -->
     
-    <section class="title-text wow fadeInDown" id="pricing">
+    <section class="title-text" id="pricing">
       <div class="title-text__row">
         <div class="title-text__col">
           <div class="title-text__wrap">
@@ -501,7 +546,7 @@
     </section>
     <!-- /.title-text -->
 
-    <section class="three-col wow fadeInDown">
+    <section class="three-col">
       <div class="three-col__row">
         <div class="three-col-col">
           <div class="three-col-col__wrap">
@@ -584,7 +629,7 @@
     </section>
     <!-- /.three-col -->
 
-    <section class="title-text wow fadeInUp" id="blog">
+    <section class="title-text" id="blog">
       <div class="title-text__row">
         <div class="title-text__col">
           <div class="title-text__wrap">
@@ -597,7 +642,7 @@
     </section>
     <!-- /.title-text -->
 
-    <section class="article-sidebar wow fadeInUp">
+    <section class="article-sidebar">
       <div class="article-sidebar__row">
         <div class="article-sidebar__content content">
           <div class="content__wrap">
@@ -696,7 +741,7 @@
     </section>
     <!-- /.article-sidebar -->
 
-    <section class="title-text wow fadeInUp" id="contact">
+    <section class="title-text" id="contact">
       <div class="title-text__row">
         <div class="title-text__col">
           <div class="title-text__wrap">
@@ -744,7 +789,7 @@
           </div>
         </div>
         <!-- /.contacts-form__info -->
-        <div class="contacts-form__form-wrap">
+        <div class="contacts-form__form-wrap animate">
           <form class="contacts-form__form form">
             <label class="form__label">
             <input type="text" class="form__input"  placeholder="Name" required></label>
@@ -764,10 +809,29 @@
         
     </section>
 
-
-
-
   </main>
+
+  <footer class="footer">
+    <div class="footer__row">
+      <div class="footer-logo">
+        <a class="footer-logo__link">
+         <svg class="footer-logo__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="170" height="50" viewBox="0 0 150 56"><defs><path id="82bna" d="M946 8420v-54h35v54zm30.24-2l2.77-1.6-27.91-48.4-2.77 1.6z"/><path id="82bnb" d="M908 8420v-54h35v54zm29.97-2l2.76-1.6-27.91-48.4-2.77 1.6z"/><path id="82bnc" d="M948.33 8369.6l2.77-1.6 27.9 48.4-2.76 1.6z"/><path id="82bne" d="M910.05 8369.6l2.77-1.6 27.9 48.4-2.75 1.6z"/><clipPath id="82bnd"><use fill="#fff" xlink:href="#82bna"/></clipPath><clipPath id="82bnf"><use fill="#fff" xlink:href="#82bnb"/></clipPath></defs><g><g transform="translate(-875 -8365)"><g fill="#fff" font-family="'Raleway-SemiBold','Raleway-SemiBold'" font-size="30" font-style="none" font-weight="400" style="text-transform:uppercase"><text dominant-baseline="text-before-edge" font-family="Helvetica, Arial, sans-serif" transform="translate(875 8375)"><tspan letter-spacing=".75" style="font-kerning:normal">H</tspan><tspan letter-spacing=".75" style="font-kerning:normal">ooky</tspan></text></g></g><g transform="translate(-905 -8365)"><use fill="#fff" xlink:href="#82bnc"/><use fill="#fff" fill-opacity="0" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#82bnd&quot;)" xlink:href="#82bnc"/></g><g transform="translate(-890 -8365)"><use fill="#fff" xlink:href="#82bne"/><use fill="#fff" fill-opacity="0" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#82bnf&quot;)" xlink:href="#82bne"/></g></g></svg>
+        </a>
+      </div>
+      <ul class="footer-menu menu-list">
+        <li class="footer-menu__item"><a href="#home" class="footer-menu__link">Home</a></li>
+        <li class="footer-menu__item"><a href="#about" class="footer-menu__link">About</a></li>
+        <li class="footer-menu__item"><a href="#work" class="footer-menu__link">Work</a></li>
+        <li class="footer-menu__item"><a href="#team" class="footer-menu__link">Team</a></li>
+        <li class="footer-menu__item"><a href="#pricing" class="footer-menu__link">Pricing</a></li>
+        <li class="footer-menu__item"><a href="#blog" class="footer-menu__link">Blog</a></li>
+        <li class="footer-menu__item"><a href="#contact" class="footer-menu__link">Contact</a></li>
+      </ul>
+      <div class="footer-info">
+        <p class="footer-info__text">Copyright <span class="footer-info__text--light">HOOKY- </span>Created by <a class="footer-info__text--red" href="#">designhooks.com</a></p>
+      </div>
+    </div>
+  </footer>
 
     <script async="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWL00d4OgxS7nhAFiO8zvKYYhnjIa0gKg&amp;language=en&amp;region=US">
     </script>

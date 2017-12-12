@@ -42,7 +42,6 @@ gulp.task('javascript', function (cb) {
     pump([
             gulp.src([
                 'assets/components/jquery/dist/jquery.js',
-                'assets/components/wow/dist/wow.js',
                 'assets/components/slick-carousel/slick/slick.js',
                 'assets/components/waypoints/lib/jquery.waypoints.js',
                 'assets/components/jquery.counterup/jquery.counterup.js',

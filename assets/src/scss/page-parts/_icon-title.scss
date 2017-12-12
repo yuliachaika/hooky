@@ -11,9 +11,6 @@
 		@include breakpoint(medium) {
 			@include flex-grid-column(5);
 		}
-		// @include breakpoint(large) {
-		// 	// margin-bottom: rem-calc(45);
-		// }
 	} 
 	&__icon {
 		padding: rem-calc(30); 
@@ -31,12 +28,10 @@
 			cursor: pointer;
 			color: $primary-color;
 		}
-		
 	}
 	&__title {
 		@include title(25, $dark-gray);
 		text-transform: none;
 		letter-spacing: rem-calc(0.63);
 	}
-
 }
