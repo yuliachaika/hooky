@@ -114,6 +114,8 @@
           // gallery first slider
           $slickSlider = $('.gallery__wrap-row--narrow');
           settingsSlider = {
+            infinite: true,
+            respondTo: 'window',
             dots: true,
             arrows: false,
             responsive: [
@@ -123,6 +125,7 @@
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 infinite: true,
+                dots: true
               }
             },
 
@@ -132,12 +135,14 @@
                 slidesToShow: 2,
                 slidesToScroll: 1,
                 infinite: true,
+                dots: true
               }
             },
             {
               breakpoint: 635,
               settings: {
                 slidesToShow: 1,
+                dots: true
               }
             }
             ]
@@ -148,6 +153,7 @@
           settingsSliderWide = {
             slidesToShow: 1,
             slidesToScroll: 1,
+            respondTo: 'window',
             infinite: true,
             dots: true,
             arrows: false

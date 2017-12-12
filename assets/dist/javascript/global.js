@@ -19662,6 +19662,8 @@ module.exports = __webpack_require__(26);
           // gallery first slider
           $slickSlider = $('.gallery__wrap-row--narrow');
           settingsSlider = {
+            infinite: true,
+            respondTo: 'window',
             dots: true,
             arrows: false,
             responsive: [
@@ -19671,6 +19673,7 @@ module.exports = __webpack_require__(26);
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 infinite: true,
+                dots: true
               }
             },
 
@@ -19680,12 +19683,14 @@ module.exports = __webpack_require__(26);
                 slidesToShow: 2,
                 slidesToScroll: 1,
                 infinite: true,
+                dots: true
               }
             },
             {
               breakpoint: 635,
               settings: {
                 slidesToShow: 1,
+                dots: true
               }
             }
             ]
@@ -19696,6 +19701,7 @@ module.exports = __webpack_require__(26);
           settingsSliderWide = {
             slidesToShow: 1,
             slidesToScroll: 1,
+            respondTo: 'window',
             infinite: true,
             dots: true,
             arrows: false
