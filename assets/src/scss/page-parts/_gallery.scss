@@ -4,6 +4,7 @@
 	&__wrap {
 		width: 100%; 
 		@include row();
+		justify-content: center;
 		&-row {
 			padding-bottom: rem-calc(3);
 			width: 100%; 
@@ -12,7 +13,6 @@
 			@include breakpoint(medium down) {
 				display: block;
 				position: relative; 
-				padding: 0 rem-calc(20); 		
 			}
 			@include breakpoint(medium only) {
 				display: block;
@@ -32,15 +32,16 @@
 		margin: 0 auto;
 		filter: grayscale(80%);
 		&__overlay {
-			width: 100%;
-			height: 100%;
-			padding: rem-calc(20);
-			top: 0;
-			left: 0;
+			margin: auto;
+	    width: 0px;
+	    height: 0px;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
 			position: absolute;
 			opacity: 0;
 			transition: all 0.4s ease; 
-			transition-delay: .1s;
 			@include breakpoint(medium down) {
 				display: none;		
 			}
@@ -58,7 +59,9 @@
 				text-transform: uppercase;
 				letter-spacing: 0.6px;
 				text-align: center;
-				transition: all 0.4s ease-out;
+				opacity: 0;
+				transform: scale(0);
+				transition: transform .5s ease, opacity .7s ease;
 			}
 		}
 		&--wide {
@@ -66,7 +69,7 @@
 		} 
 		&__wrap {
 			position: relative; 
-			filter: grayscale(80%);
+			filter: grayscale(55%);
 			transition: all 0.4s ease;
 			&--left {
 				@include bg('../img/gallery-wide-1.png');
@@ -75,11 +78,8 @@
 				@include bg('../img/gallery-wide.png');
 				background-color: $black;
 			}
-			&:hover { 
-				@include breakpoint(medium up) {
-					transition: all 0.4s ease;
-					cursor: pointer;
-					&::before {
+			//
+			&::before {
 						content: '';
 						position: absolute;
 						width: rem-calc(70);
@@ -94,6 +94,9 @@
 						top: rem-calc(40);
 						left: rem-calc(40);
 						z-index: 10; 
+						opacity: 0;
+						transform: scale(0);
+						transition: transform .5s ease, opacity .7s ease;
 					}
 					&::after {
 						content: '';
@@ -109,10 +112,36 @@
 						}  
 						bottom: rem-calc(40);
 						right: rem-calc(40); 
+						opacity: 0;
+						transform: scale(0);
+						transition: transform .5s ease, opacity .7s ease;
+					}
+			//
+			&:hover { 
+				@include breakpoint(medium up) {
+					transition: all 0.4s ease;
+					cursor: pointer;
+					&::before {
+						opacity: 1;
+    				transform: scale(1);
+    				transition: transform .5s ease, opacity 1.3s ease;
+					}
+					&::after {
+						opacity: 1;
+    				transform: scale(1);
+    				transition: transform .5s ease, opacity 1.3s ease;
 					}
 					& .gallery-img__overlay {
 						opacity: 1;
 						transition: all 0.4s ease-out;
+						width: 100%;
+						height: 100%;
+						padding: rem-calc(20);
+						&-text {
+							opacity: 1;
+    					transform: scale(1);
+    					transition: transform .5s ease, opacity 1.3s ease;
+						}
 					}
 				}
 
